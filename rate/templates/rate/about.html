@@ -1,0 +1,673 @@
+<!doctype html>
+{% load static %} {% block content %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content />
+    <meta name="author" content />
+    <meta name="robots" content />
+    <meta name="description" content />
+
+    <link
+      rel="icon"
+      href="{% static 'images/favicon.html' %}"
+      type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.png' %}" />
+
+    <title>About Us | Trading247 Hub</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- [if lt IE 9]>
+        <script src="{% static 'js/fx/html5shiv.min.js' %}"></script>
+        <script src="{% static 'js/fx/respond.min.js' %}"></script>
+	<![endif] -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/bootstrap.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/font-awesome.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/flaticon.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/animate.min.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/themify-icons.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/owl.carousel.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/bootstrap-select.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/magnific-popup.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/loader.min.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/skin/style.css' %}" />
+
+    <link
+      rel="stylesheet"
+      class="skin"
+      type="text/css"
+      href="{% static 'css/fx/skin/skin-1.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/fx/custom.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/switcher.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/settings.css' %}" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/fx/navigation.css' %}" />
+
+    <style>
+      /* Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .site-header {
+        background: #0c1d36;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .nav-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .nav-menu ul li a:hover {
+        color: #fcb100;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+      }
+
+      /* Overlay */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 998;
+      }
+
+      /* Mobile Slide-in */
+      @media (max-width: 768px) {
+        .nav-menu {
+          position: fixed;
+          top: 0;
+          right: -260px;
+          width: 250px;
+          height: 100vh;
+          background: #0c1d36;
+          padding: 60px 20px;
+          transition: right 0.3s ease;
+          box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+          z-index: 999;
+        }
+
+        .nav-menu.active {
+          right: 0;
+        }
+
+        .nav-menu ul {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          font-size: 28px;
+          cursor: pointer;
+          color: #fff;
+        }
+
+        .overlay.active {
+          display: block;
+        }
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crete+Round:400,400i&amp;subset=latin-ext"
+      rel="stylesheet" />
+  </head>
+  <body id="bg">
+    <div class="page-wraper">
+      <header class="site-header">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="{% url 'index' %}">
+              <img src="{% static 'images/logo.png' %}" alt="Trading247 Hub" />
+            </a>
+          </div>
+
+          <nav class="nav-menu" id="nav-menu">
+            <div class="close-btn" id="close-menu">&times;</div>
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'wealth' %}">Wealth Management</a></li>
+              <li><a href="{% url 'rbc' %}">RBC CS</a></li>
+              <li><a href="{% url 'plan' %}">Plans</a></li>
+            </ul>
+          </nav>
+
+          <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </div>
+
+        <div class="overlay" id="nav-overlay"></div>
+      </header>
+
+      <div class="page-content">
+        <div
+          class="wt-bnr-inr overlay-wraper"
+          style="background-image: url(../images/banner/about-banner.jpg)">
+          <div class="overlay-main bg-black opacity-07"></div>
+          <div class="container">
+            <div class="wt-bnr-inr-entry">
+              <h1 class="text-white">About Us</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-light p-tb20">
+          <div class="container">
+            <ul class="wt-breadcrumb breadcrumb-style-2">
+              <li>
+                <a href="javascript:void(0);"
+                  ><i class="fa fa-home"></i> Home</a
+                >
+              </li>
+              <li>About Us</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-full p-tb100">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="section-head text-left">
+                  <span class="wt-title-subline text-gray-dark font-16 m-b15"
+                    >What is bitcoin</span
+                  >
+                  <h2 class="text-uppercase">A New Kind of Money</h2>
+                  <div class="wt-separator-outer">
+                    <div class="wt-separator bg-primary"></div>
+                  </div>
+
+                  <p>
+                    Trading247 Hub Trade is a privately-owned, full-service
+                    broker-dealer and registered investment advisor, providing
+                    quality investment service to high net worth individuals and
+                    institutions. Trading247 Hub Trade is also a member of the
+                    National Association of Securities Dealers and investments
+                    at Trading247 Hub Trade are <a href="#">SIPC</a> insured.
+                  </p>
+                  <p>
+                    Trading247 Hub Trade is one of the most transformative
+                    technologies since the invention of the Internet. Trading247
+                    Hub Trade stands firmly in support of financial freedom and
+                    the liberty that Bitcoin provides globally for anyone to
+                    voluntarily participate in a permissionless and
+                    decentralized network which empowers people to not be
+                    marginalized by governments and financial institutions. We
+                    welcome you to the digital world of crypto investment,
+                    Trading247 Hub Trade - where our clients will receive stable
+                    and risk-free long-term returns by placing your Bitcoin,
+                    Ethereum and Litecoin asset in our online profound asset
+                    management program.Trading247 Hub Trade is an active
+                    cryptocurrency mining and trading participant,
+                    crypto-currency asset management, which is built on many
+                    years of experience and deep market knowledge in the stock
+                    and digital market.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="wt-media">
+                  <img
+                    src="{% static 'images/gallery/pic3.jpg' %}"
+                    alt
+                    class="img-responsive" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-full p-t80 p-b80 bg-gray">
+          <div class="container">
+            <div class="section-head text-center">
+              <span class="wt-title-subline font-22 text-gray-dark m-b15"
+                >Secured Investments</span
+              >
+              <h2 class="text-uppercase">Why Choose Trading247 Hub</h2>
+              <div class="wt-separator-outer">
+                <div class="wt-separator bg-primary"></div>
+              </div>
+            </div>
+
+            <div class="section-content no-col-gap">
+              <div class="row">
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-29.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Instant Trading
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-28.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Recurring Buying
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-17.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Safe and Secure
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-19.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Investment Planning
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-12.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Covered By Insurance
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 animate_line">
+                  <div class="wt-icon-box-wraper p-a30 center bg-white m-a5">
+                    <div class="icon-lg text-primary m-b20">
+                      <a href="#" class="icon-cell"
+                        ><img src="{% static 'images/icon/pick-38.png' %}" alt
+                      /></a>
+                    </div>
+                    <div class="icon-content">
+                      <h4 class="wt-tilte text-uppercase font-weight-500">
+                        Bitcoin Transaction
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-full bg-primary p-t50 p-b30">
+          <div class="container">
+            <div class="section-content">
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="text-black wt-icon-box-wraper center">
+                    <div class="counter font-70 font-weight-800 m-b5">156</div>
+                    <span class="font-18">Support Countries</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="m-b30 text-black wt-icon-box-wraper center">
+                    <div class="font-70 font-weight-800 m-b5">
+                      <span class="counter">13245</span>
+                    </div>
+                    <span class="font-18">Happy Clients</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="m-b30 text-black wt-icon-box-wraper center">
+                    <div class="counter font-70 font-weight-800 m-b5">
+                      535689
+                    </div>
+                    <span class="font-18">Payouts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer
+        class="site-footer footer-dark bg-no-repeat bg-full-height bg-center"
+        style="background-image: url(../images/background/footer-bg.jpg)">
+        <div class="footer-top overlay-wraper">
+          <div class="overlay-main bg-black opacity-05"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="widget widget_about">
+                  <h4 class="widget-title text-white">About Trading247 Hub</h4>
+                  <div class="logo-footer clearfix p-b15">
+                    <a href="{% url 'index' %}"
+                      ><img
+                        src="{% static 'images/footer-logo.png' %}"
+                        width="230"
+                        height="67"
+                        alt
+                    /></a>
+                  </div>
+                  <p>
+                    Investment strategy is based on well researched Index
+                    Strategy and invests exclusively into top 20 underlying
+                    crypto assets with the highest market capitalization.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <h4 class="widget-title text-white">Emails</h4>
+                <div
+                  class="wt-icon-box-wraper left bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                  <div class="icon-md text-primary">
+                    <span class="iconmoon-email"></span>
+                  </div>
+                  <div class="icon-content text-white">
+                    <h5 class="wt-tilte text-uppercase m-b3">Email</h5>
+                    <p class="m-b0">
+                      <a
+                        href="mailto:service.Trading247 Hub@outlook.com"
+                        class="__cf_email__"
+                        data-cfemail="562523262639242216343f38313b3f383f38317835393b"
+                        >service.Trading247 Hub@outlook.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="wt-icon-box-wraper left bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                  <div class="icon-md text-primary">
+                    <span class="iconmoon-email"></span>
+                  </div>
+                  <div class="icon-content text-white">
+                    <h5 class="wt-tilte text-uppercase m-b0">Email</h5>
+                    <p>
+                      <a
+                        href="mailto:service.Trading247 Hub@outlook.com"
+                        class="__cf_email__"
+                        data-cfemail="88e9ece5e1e6c8eae1e6efe5e1e6e1e6efa6ebe7e5"
+                        >service.Trading247 Hub@outlook.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="wt-icon-box-wraper left bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                  <div class="icon-md text-primary">
+                    <span class="iconmoon-travel"></span>
+                  </div>
+                  <div class="icon-content text-white">
+                    <h5 class="wt-tilte text-uppercase m-b0">Address</h5>
+                    <p>1900 Fifth Avenue North Birmingham, Alabama, USA</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="widget widget_services">
+                  <h4 class="widget-title text-white">Useful links</h4>
+                  <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'wealth' %}">Wealth Management</a></li>
+                    <li><a href="{% url 'rbc' %}">RBC</a></li>
+                    <li><a href="{% url 'plan' %}">Plans</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-6 p-tb20"></div>
+              <div class="col-md-3 col-sm-6 p-tb20"></div>
+              <div class="col-md-3 col-sm-6 p-tb20"></div>
+              <div class="col-md-3 col-sm-6 p-tb20"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom overlay-wraper">
+          <div class="overlay-main"></div>
+          <div class="constrot-strip"></div>
+          <div class="container p-t30">
+            <div class="row">
+              <div class="wt-footer-bot-left">
+                <span class="copyrights-text">© 2025 Trading247 Hub.</span>
+              </div>
+              <div class="wt-footer-bot-right">
+                <ul class="copyrights-nav pull-right">
+                  <li>
+                    <a href="{% url 'terms' %}" target="_blank">
+                      Terms & Condition</a
+                    >
+                  </li>
+                  <li>
+                    <a href="{% static 'images/terms.pdf' %}" target="_blank"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <button class="scroltop">
+        <span class="iconmoon-house relative" id="btn-vibrate"></span>Top
+      </button>
+    </div>
+
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: ".gtranslate_wrapper",
+        flag_style: "3d",
+      };
+    </script>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/float.js"
+      defer></script>
+    <script
+      data-cfasync="false"
+      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'js/fx/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/fx/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/fx/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/fx/jquery.bootstrap-touchspin.min.js' %}"></script>
+    <script src="{% static 'js/fx/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/fx/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/fx/waypoints-sticky.min.js' %}"></script>
+    <script src="{% static 'js/fx/counterup.min.js' %}"></script>
+    <script src="{% static 'js/fx/waypoints-sticky.min.js' %}"></script>
+    <script src="{% static 'js/fx/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/fx/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/fx/stellar.min.js' %}"></script>
+    <script src="{% static 'js/fx/scrolla.min.js' %}"></script>
+    <script src="{% static 'js/fx/custom.js' %}"></script>
+    <script src="{% static 'js/fx/template.js' %}"></script>
+    <script src="{% static 'js/fx/shortcode.js' %}"></script>
+    <script src="{% static 'js/fx/jquery.bgscroll.js' %}"></script>
+    <script src="{% static 'js/fx/tickerNews.min.js' %}"></script>
+
+    <script src="{% static 'js/fx/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'js/fx/jquery.themepunch.revolution.min.js' %}"></script>
+
+    <script src="{% static 'js/fx/plugins/revolution/revolution/js/extensions/revolution-plugin.js' %}"></script>
+
+    <script src="{% static 'js/fx/rev-script-2.js' %}"></script>
+
+    <script src="//code.jivosite.com/widget/wMbleQgp3o" async></script>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      const closeBtn = document.getElementById("close-menu");
+      const overlay = document.getElementById("nav-overlay");
+
+      menuToggle.onclick = () => {
+        navMenu.classList.add("active");
+        overlay.classList.add("active");
+      };
+
+      closeBtn.onclick = () => {
+        navMenu.classList.remove("active");
+        overlay.classList.remove("active");
+      };
+
+      overlay.onclick = () => {
+        navMenu.classList.remove("active");
+        overlay.classList.remove("active");
+      };
+
+      // Close on link click
+      document.querySelectorAll("#nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+    </script>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vedd3670a3b1c4e178fdfb0cc912d969e1713874337387"
+      integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ=="
+      data-cf-beacon='{"rayId":"884e22a1bf8fdd5c","version":"2024.4.1","r":1,"token":"436f89902bf041b6b8d0af0823a009a9","b":1}'
+      crossorigin="anonymous"></script>
+  </body>
+  {% endblock content %}
+</html>
